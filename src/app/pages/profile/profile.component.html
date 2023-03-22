@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="p-3">
+  <h2>My profile</h2>
+  <div class="alert alert-success" role="alert" *ngIf="successMsg">
+    <p>{{successMsg}}</p>
+  </div>
+  <div class="d-flex flex-row justify-content-between">
+    <div class="card p-3 col-6 me-1">
+      <h3>User info</h3>
+      <div class="mb-3">
+        <label for="firstname" class="form-label">Firstname</label>
+        <input [ngModel]="userDto.firstName" type="text" class="form-control" id="firstname" placeholder="Firstname">
+      </div>
+      <div class="mb-3">
+        <label for="lastname" class="form-label">Lastname</label>
+        <input [ngModel]="userDto.lastName" type="text" class="form-control" id="lastname" placeholder="Lastname">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input [(ngModel)]="userDto.email" type="email" class="form-control" id="email" placeholder="mail@email.com" >
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Email</label>
+        <input [(ngModel)]="userDto.password" type="email" class="form-control" id="password" placeholder="********" >
+      </div>
+    </div>
+
+  </div>
+  <div class="d-flex justify-content-end mt-3">
+    <button type="button" class="btn btn-link">
+      <em class="fas fa-times"></em>&nbsp;Cancel
+    </button>
+    <button (click)="save()" type="button" class="btn btn-danger">
+      <em class="fas fa-save"></em>&nbsp;Save
+    </button>
+  </div>
+</div>

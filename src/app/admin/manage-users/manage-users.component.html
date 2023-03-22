@@ -1,0 +1,38 @@
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"></a>
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <ul class="navbar-nav px-3">
+  </ul>
+</nav>
+
+<div class="d-flex">
+    <app-admin-dashboard style="width: 22%"></app-admin-dashboard>
+
+  <div class="card p-3 " style="width: 100%">
+    <h2>Liste des utilisateurs</h2>
+    <div>
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th scope="col">Firstname</th>
+          <th scope="col">Lastname</th>
+          <th scope="col">EMAIL</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let cus of users">
+          <td>{{cus.firstName}}</td>
+          <td>{{cus.lastName}}</td>
+          <td>{{cus.email}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+</div>
+
+</div>
+
+
+
+

@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+<div class="row login-container" style="border: 1px; padding: 2px">
+  <div class="card col-sm-4 offset-sm-1" style="background-color: #F9F9FF">
+    <h3 class="text-center">Se connecter</h3>
+  <hr>
+    <div class="alert alert-danger" role="alert" *ngIf="errorMessage.length">
+      <p *ngFor="let msg of errorMessage">{{msg}}</p>
+    </div>
+  <div class="mb-3">
+    <label for="login" class="form-label">Adresse mail</label>
+    <input [(ngModel)]="authRequest.email"  type="email" class="form-control" id="login" placeholder="name@example.com">
+  </div>
+  <div class="mb-3">
+    <label for="motdepasseLogin" class="form-label">Mot de passe</label>
+    <input [(ngModel)]="authRequest.password"  class="form-control" id="motdepasseLogin" placeholder="mot de passe">
+  </div>
+  <div class="d-flex justify-content-between mb-3">
+    <button (click)="login()"  type="button" class="btn" style="background-color: #DE8500" >
+      <em class="fas fa-sign-in-alt">&nbsp;Sign in</em>
+    </button>
+    <p class="btn-link">Mot de passe oublier ??</p>
+  </div>
+  </div>
+  <div class="card col-sm-4 offset-sm-1" style="background-color: #F9F9FF">
+  <h3 class="text-center">Créer un Compte</h3>
+  <hr>
+    <div class="alert alert-danger" role="alert" *ngIf="errorMessages.length">
+      <p *ngFor="let msg of errorMessages">{{msg}}</p>
+    </div>
+  <div class="mb-3">
+    <label for="firstname" class="form-label">Nom</label>
+    <input [(ngModel)]="userDto.firstName"  type="text" class="form-control" id="firstname" placeholder="joe">
+  </div>
+  <div class="mb-3">
+    <div class="mb-3">
+      <label for="lastname" class="form-label">Prénom</label>
+      <input [(ngModel)]="userDto.lastName"  type="text" class="form-control" id="lastname" placeholder="doe">
+    </div>
+    <div class="mb-3">
+      <div class="mb-3">
+        <label for="register" class="form-label">Aresse mail</label>
+        <input [(ngModel)]="userDto.email"  type="text" class="form-control" id="register" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="motdepasseRegister" class="form-label">Mot de passe</label>
+        <input [(ngModel)]="userDto.password"  class="form-control" id="motdepasseRegister" placeholder="mot de passe">
+      </div>
+      <div class="d-flex justify-content-end mb-3 ">
+        <button (click)="register()" type="button" class="btn" style="background-color: #DE8500">
+          Confirmer
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
